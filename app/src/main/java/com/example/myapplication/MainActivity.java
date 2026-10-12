@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -12,7 +13,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
+    public float liczba=0;
     public String CurrentDisplay="";
+    public int dzialanie=0;
 
     public void dodaj1(View view){
         TextView resultat = findViewById(R.id.textView);
@@ -68,8 +71,27 @@ public class MainActivity extends AppCompatActivity {
         TextView resultat = findViewById(R.id.textView);
         CurrentDisplay="";
         resultat.setText(CurrentDisplay);
+        liczba=0;
     }
+    public void dodawanie(View view){
 
+        TextView resultat = findViewById(R.id.textView);
+        liczba=liczba+Float.parseFloat(CurrentDisplay);
+        resultat.setText(Float.toString(liczba));
+        dzialanie=1;
+        CurrentDisplay="";
+        resultat.setText(CurrentDisplay);
+    }
+    public void ruwnanie(View view){
+        TextView resultat = findViewById(R.id.textView);
+        if(dzialanie==1) {
+//            resultat.setText(Float.toString(liczba));
+            liczba = liczba + Float.parseFloat(CurrentDisplay);
+            resultat.setText(Float.toString(liczba));
+        }else{
+            resultat.setText(Float.toString(liczba));
+        }
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
