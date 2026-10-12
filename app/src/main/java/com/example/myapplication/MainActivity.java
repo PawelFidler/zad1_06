@@ -69,8 +69,12 @@ public class MainActivity extends AppCompatActivity {
     }
     public void dodajprzecinek(View view){
         TextView resultat = findViewById(R.id.textView);
-        CurrentDisplay=CurrentDisplay+".";
-        resultat.setText(CurrentDisplay);
+        if(CurrentDisplay.contains(".")){
+
+        }else{
+            CurrentDisplay=CurrentDisplay+".";
+            resultat.setText(CurrentDisplay);
+        }
     }
     public void clear(View view){
         TextView resultat = findViewById(R.id.textView);
