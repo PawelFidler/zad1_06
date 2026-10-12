@@ -131,6 +131,7 @@
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:text="-"
+            android:onClick="odejmowanie"
             app:layout_constraintStart_toEndOf="@+id/button19"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -139,6 +140,7 @@
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:text="x"
+            android:onClick="mnozenie"
             app:layout_constraintStart_toEndOf="@+id/button20"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -147,6 +149,7 @@
             android:layout_width="105dp"
             android:layout_height="50dp"
             android:text=":"
+            android:onClick="dzielenie"
             app:layout_constraintStart_toEndOf="@+id/button21"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 

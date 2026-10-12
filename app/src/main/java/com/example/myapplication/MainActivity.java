@@ -91,6 +91,33 @@ public class MainActivity extends AppCompatActivity {
         CurrentDisplay="";
         resultat.setText(CurrentDisplay);
     }
+    public void odejmowanie(View view){
+
+        TextView resultat = findViewById(R.id.textView);
+        liczba=Float.parseFloat(CurrentDisplay);
+        resultat.setText(Float.toString(liczba));
+        dzialanie=2;
+        CurrentDisplay="";
+        resultat.setText(CurrentDisplay);
+    }
+    public void mnozenie(View view){
+
+        TextView resultat = findViewById(R.id.textView);
+        liczba=Float.parseFloat(CurrentDisplay);
+        resultat.setText(Float.toString(liczba));
+        dzialanie=3;
+        CurrentDisplay="";
+        resultat.setText(CurrentDisplay);
+    }
+    public void dzielenie(View view){
+
+        TextView resultat = findViewById(R.id.textView);
+        liczba=Float.parseFloat(CurrentDisplay);
+        resultat.setText(Float.toString(liczba));
+        dzialanie=4;
+        CurrentDisplay="";
+        resultat.setText(CurrentDisplay);
+    }
     public void ruwnanie(View view){
         System.out.println(dzialanie);
         System.out.println(liczba);
@@ -99,6 +126,18 @@ public class MainActivity extends AppCompatActivity {
         if(dzialanie==1) {
 //            resultat.setText(Float.toString(liczba));
             liczba = liczba + Float.parseFloat(CurrentDisplay);
+            CurrentDisplay=Float.toString(liczba);
+            resultat.setText(CurrentDisplay);
+        }else if(dzialanie==2){
+            liczba = liczba - Float.parseFloat(CurrentDisplay);
+            CurrentDisplay=Float.toString(liczba);
+            resultat.setText(CurrentDisplay);
+        }else if(dzialanie==3){
+            liczba = liczba * Float.parseFloat(CurrentDisplay);
+            CurrentDisplay=Float.toString(liczba);
+            resultat.setText(CurrentDisplay);
+        }else if(dzialanie==4){
+            liczba = liczba / Float.parseFloat(CurrentDisplay);
             CurrentDisplay=Float.toString(liczba);
             resultat.setText(CurrentDisplay);
         }else{
