@@ -21,6 +21,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:text=","
+            android:onClick="dodajprzecinek"
             app:layout_constraintStart_toEndOf="@+id/button23"
             app:layout_constraintTop_toBottomOf="@+id/button16" />
 

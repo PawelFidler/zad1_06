@@ -67,6 +67,11 @@ public class MainActivity extends AppCompatActivity {
         CurrentDisplay=CurrentDisplay+"0";
         resultat.setText(CurrentDisplay);
     }
+    public void dodajprzecinek(View view){
+        TextView resultat = findViewById(R.id.textView);
+        CurrentDisplay=CurrentDisplay+".";
+        resultat.setText(CurrentDisplay);
+    }
     public void clear(View view){
         TextView resultat = findViewById(R.id.textView);
         CurrentDisplay="";
@@ -76,18 +81,22 @@ public class MainActivity extends AppCompatActivity {
     public void dodawanie(View view){
 
         TextView resultat = findViewById(R.id.textView);
-        liczba=liczba+Float.parseFloat(CurrentDisplay);
+        liczba=Float.parseFloat(CurrentDisplay);
         resultat.setText(Float.toString(liczba));
         dzialanie=1;
         CurrentDisplay="";
         resultat.setText(CurrentDisplay);
     }
     public void ruwnanie(View view){
+        System.out.println(dzialanie);
+        System.out.println(liczba);
+        System.out.println(CurrentDisplay);
         TextView resultat = findViewById(R.id.textView);
         if(dzialanie==1) {
 //            resultat.setText(Float.toString(liczba));
             liczba = liczba + Float.parseFloat(CurrentDisplay);
-            resultat.setText(Float.toString(liczba));
+            CurrentDisplay=Float.toString(liczba);
+            resultat.setText(CurrentDisplay);
         }else{
             resultat.setText(Float.toString(liczba));
         }
